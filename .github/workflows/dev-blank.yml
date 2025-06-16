@@ -27,7 +27,7 @@ jobs:
           content: >-
             ${{ job.status == 'success' &&
                 format('`[{0}]` 🎉 배포가 성공적으로 완료됐어요!', github.ref_name)
-            || format('`[{0}]` 🚨 배포 실패! <@&1286930135756312669> 확인해주세요.', github.ref_name) }}
+                || format('`[{0}]` 🚨 배포 실패! <@&{1}> 확인해주세요.', github.ref_name, secrets.DISCORD_BACKEND_ROLE_ID) }}
           title: >-
             ${{ job.status == 'success' &&
                 format('✅ [{0}] 배포 성공', github.ref_name)
