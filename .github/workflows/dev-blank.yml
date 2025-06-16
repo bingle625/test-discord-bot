@@ -16,7 +16,7 @@ jobs:
       - name: Test Step (fake build)
         run: |
           echo "This simulates a build step"
-          exit 0 # 실패 테스트하려면 'exit 1'로 변경
+          exit 1 # 실패 테스트하려면 'exit 1'로 변경
 
       - name: Discord Notify (Always)
         if: always()
