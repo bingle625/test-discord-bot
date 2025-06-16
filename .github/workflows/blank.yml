@@ -22,7 +22,7 @@ jobs:
         if: always()
         uses: sarisia/actions-status-discord@v1
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_URL_DEV }}
+          webhook: ${{ secrets.DISCORD_WEBHOOK_URL_PROD }}
           status: ${{ job.status }}
           content: >-
             ${{ job.status == 'success' &&
